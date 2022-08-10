@@ -1,0 +1,20 @@
+{
+  "title": "SFTP Server Connection",
+  "description": "Component that execute several options inside an sftp.",
+  "docsUrl": "",
+  "buildType": "docker",
+  "credentials": {
+  },
+  "triggers": {
+    "testTriggers": {
+      "title": "Test...",
+      "main": "./lib/triggers/processTrigger.js"
+    }
+  },
+  "actions": {
+    "sftp": {
+      "title": "SFTP Component",
+      "main": "./lib/actions/sftp.js"
+    }
+  }
+}
