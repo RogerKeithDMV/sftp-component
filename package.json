@@ -12,14 +12,9 @@
   "dependencies": {
     "@openintegrationhub/ferryman": "^2.1.0",
     "@openintegrationhub/ferryman-1-7": "npm:@openintegrationhub/ferryman@^1.7.1",
-    "amqplib": "^0.10.0",
-    "bunyan": "^1.8.15",
-    "bunyan-format": "^0.2.1",
-    "dotenv": "^16.0.1",
     "express": "^4.18.1",
-    "nodemon": "^2.0.19",
-    "rabbitmqcg-nxg-oih": "^0.2.2",
+    "msgbroker-nxg-cg": "^0.0.4",
     "sftp-cg-lib": "^0.0.1-SNAPSHOT",
-    "ssh2-sftp-client": "^8.1.0"
+    "utils-nxg-cg": "^1.0.7"
   }
 }
