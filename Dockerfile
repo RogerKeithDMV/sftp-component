@@ -17,6 +17,10 @@ RUN npm ci --omit=dev
 
 COPY . /usr/src/app
 
+RUN mkdir /usr/src/app/key
+
+COPY ./Keypair6Delta.ppk /usr/src/app/key
+
 RUN chown -R node:node .
 RUN chmod +x ./start.sh
 
