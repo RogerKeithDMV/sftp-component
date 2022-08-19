@@ -1,4 +1,4 @@
-const rabbitmq = require('msgbroker-nxg-cg');
+const rabbitmq = require('msgbroker-nxg-cgh');
 const {log, constants} = require('utils-nxg-cg');
 const {sftp} = require('sftp-cg-lib');
 const {emits} = constants;
@@ -21,6 +21,6 @@ module.exports.process = async function sftpProcess(msg, cfg, snapshot = {}) {
     } catch (e) {
         log.error(e);
         this.emit(emits.error, e);
-        await rabbitmq.producerErrorMessage(msg, e);
+        await rabbitmq.producerErrorMessage(msg.toString(), e.toString());
     }
 };

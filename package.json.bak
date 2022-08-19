@@ -13,8 +13,8 @@
     "@openintegrationhub/ferryman": "^2.1.0",
     "@openintegrationhub/ferryman-1-7": "npm:@openintegrationhub/ferryman@^1.7.1",
     "express": "^4.18.1",
-    "msgbroker-nxg-cg": "^0.1.0",
-    "sftp-cg-lib": "1.0.9",
+    "msgbroker-nxg-cg": "^0.0.4",
+    "sftp-cg-lib": "1.0.7",
     "utils-nxg-cg": "^1.0.7"
   }
 }

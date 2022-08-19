@@ -22,17 +22,10 @@ app.post('/', async(req, res)=>{
   properties.createDirectory=req.body.createDirectory;
   properties.deleteDirectory=req.body.deleteDirectory;
   properties.localDirectory=req.body.localDirectory;
-
+  properties.encoding=req.body.encoding;
 
   try{
-    log.info("Se tiene llave..."+properties.key);
-    if(fs.accessSync(properties.key, fs.R_OK)) {
-      //content = fs.readFileSync(filename);
-      log.info("Se tiene llave y si existe...");
-     }
-     else{
-      log.info("Se tiene llave y no existe...");
-     }
+
     const result = await sftp({data:properties},{});
     log.info("resultado", result);
     res.json(result);
