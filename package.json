@@ -15,7 +15,7 @@
     "express": "^4.18.1",
     "errorhandler-nxg-cg": "^1.1.0",
 	"loging-elastic-cg-lib": "^0.1.13",
-    "sftp-cg-lib": "1.0.9",
+    "sftp-cg-lib": "1.0.20",
     "utils-nxg-cg": "^1.0.7"
   }
 }
