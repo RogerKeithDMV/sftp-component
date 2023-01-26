@@ -23,13 +23,16 @@ app.post('/', async (req, res) => {
         log.info("va a ejeuctar sftp");
         //const result = await sftp({data: properties}, {});
         const {result, flag} = await sftp({data: properties}, {});
-        log.info("resultado", result);
+        //log.info("resultado", result);
+        console.log("Si trae resultado...");
         const data = {
             content: result
         }
-        const md5sum = createSum(result, flag);
-        if (md5sum)
-            data.md5sum = md5sum;
+        console.log("md5...");
+        //const md5sum = createSum(result, flag);
+        //if (md5sum)
+        //    data.md5sum = md5sum;
+        console.log("Va a regresar resultado...");
         res.json(result);
     } catch (err) {
         res.status(400).json(err);
