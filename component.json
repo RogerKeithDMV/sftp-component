@@ -1,14 +1,80 @@
 {
   "title": "SFTP Server Connection",
   "description": "Component that execute several options inside an sftp.",
-  "docsUrl": "",
+  "docsUrl": "https://github.com/CloudGenUser/sftp-component/blob/main/README.md",
   "buildType": "docker",
-  "credentials": {
+  "fields":{
+    "flag": {
+      "description": "The string that contains the action to execute, can be one of this: CREATEDIRECTORY, DELETEDIRECTORY, DELETEFILE, DOWNLOADIRECTORY, GETFILE, GETLISTFILES, RENAMEFILE, SAVEFILE, UPLOADIRECTORY. The string is not case sensitive",
+      "defaultValue": null,
+      "label": "flag",
+      "required": true
+    },
+    "host": {
+      "description": "The host where the connection will be established, can be a url or ip",
+      "defaultValue": null,
+      "label": "host",
+      "required": true
+    },
+    "path": {
+      "description": "The full path where the action will be done, can be: create the directory in the sftp, delete a directory in the sftp, where a file in the sftp is (to delete, create, get or rename), the directory that will be downloaded from the sftp or the location that will be uploaded inside the sftp.",
+      "defaultValue": null,
+      "label": "path",
+      "required": true
+    },
+    "port": {
+      "description": "Property to specify the port the connect to email",
+      "defaultValue": null,
+      "label": "port",
+      "required": true
+    },
+    "username": {
+      "description": "The username that have grants to connect with the sftp server",
+      "defaultValue": null,
+      "label": "username",
+      "required": true
+    },
+    "encoding": {
+      "description": " The encoding that that will be used to get the file, if this parameter is not sent base64 will be taken as default",
+      "defaultValue": null,
+      "label": "encoding",
+      "required": false
+    },
+    "file": {
+      "description": "The name of the file that will be deleted inside the sftp, the name of the file that will be renamed inside the sftp or the file that will be get or delete inside the sftp",
+      "defaultValue": null,
+      "label": "file",
+      "required": false
+    },
+    "key": {
+      "description": "Parameter that have the path where is the key and the name of the key file that can stablish connection with the sftp, if this parameter is used avoid to use the password parameter, in case the two parameters are specified this will have priority and the password will be ignored",
+      "defaultValue": null,
+      "label": "key",
+      "required": false
+    },
+    "nameDirectory": {
+      "description": "The nama of the directory that will be created in the sftp, deleted in the sftp or download in out local machine or upload from the local machin",
+      "defaultValue": null,
+      "label": "nameDirectory",
+      "required": false
+    },
+    "nameNewFile": {
+      "description": "The new name of the file that will be used",
+      "defaultValue": null,
+      "label": "nameNewFile",
+      "required": false
+    },
+    "password": {
+      "description": "This parameter contains the password that can stablish connection with the sftp",
+      "defaultValue": null,
+      "label": "password",
+      "required": false
+    }
   },
   "triggers": {
-    "testTriggers": {
-      "title": "Test...",
-      "main": "./lib/triggers/processTrigger.js"
+    "sftp_source": {
+      "title": "SFTP Component",
+      "main": "./lib/actions/sftp.js"
     }
   },
   "actions": {
